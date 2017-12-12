@@ -1,0 +1,10 @@
+Database Schema
+----------------
+
+Workout -> Named Collection of ExerciseDefinitions
+
+ExerciseDefinition -> 'Bench Press', 'Deadlift'
+ExerciseInstance -> Monday's Bench Press, keeps weight and rep count
+
+Saving a Workout creates new ExerciseInstances for each submitted ExerciseDefinition.
+
