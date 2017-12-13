@@ -14,3 +14,10 @@ services:
             - db
         env_file:
             - exerlog/local-variables.env
+    frontend:
+        build: frontenderlog/.
+        command: npm run dev
+        volumes:
+            - ./frontenderlog:/usr/src/app
+        ports:
+            - "8080:8080"
