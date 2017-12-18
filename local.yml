@@ -3,6 +3,8 @@ version: '3'
 services:
     db:
         image: postgres
+        volumes:
+            - pgdata:/var/lib/postgresql/data
     web:
         build: exerlog/.
         command: python3 manage.py runserver 0.0.0.0:8000
@@ -21,3 +23,6 @@ services:
             - ./frontenderlog:/usr/src/app
         ports:
             - "8080:8080"
+
+volumes:
+    pgdata: {}

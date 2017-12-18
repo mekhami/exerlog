@@ -32,13 +32,11 @@ h1, h2 {
 }
 ul {
   list-style-type: none;
-  list-style: none;
   padding: 0;
 }
 li {
   display: inline-block;
   margin: 0 10px;
-  list-style: none;
 }
 a {
   color: #42b983;
