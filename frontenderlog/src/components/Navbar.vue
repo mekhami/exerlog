@@ -77,7 +77,12 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data () {
+    return {
+      drawer: null
+    }
+  }
 }
 </script>
 

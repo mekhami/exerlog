@@ -45,7 +45,13 @@ export default {
         'Bench Press',
         'Incline Press',
         'Military Press'
-      ]
+      ],
+      selectedExercises: []
+    }
+  },
+  methods: {
+    submit () {
+
     }
   }
 }

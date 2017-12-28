@@ -32,6 +32,11 @@ export default {
         (v) => !!v || 'Name is required'
       ]
     }
+  },
+  methods: {
+    submit () {
+
+    }
   }
 }
 </script>
