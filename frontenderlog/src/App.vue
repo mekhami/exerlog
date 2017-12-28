@@ -1,77 +1,6 @@
 <template>
   <v-app light>
-    <v-navigation-drawer 
-      clipped
-      fixed
-      v-model="drawer"
-      app>
-      <v-list dense>
-        <router-link to="/">
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Home</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-        <router-link to="/new_workout">
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>New Workout</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-        <router-link to="/create_workout">
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Create Workout</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-        <router-link to="/workouts">
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>My Workouts</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-        <router-link to="/create_exercise">
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Create Exercise</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-        <router-link to="/progress">
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>My Progress</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </router-link>
-      </v-list>
-    </v-navigation-drawer>
-    <v-toolbar color="indigo" dark app fixed clipped-left>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Exerlog</v-toolbar-title>
-    </v-toolbar>
+    <navbar />
     <v-content>
       <v-container fluid>
         <router-view/>
@@ -82,8 +11,11 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
+
 export default {
   name: 'app',
+  components: { Navbar },
   data () {
     return {
       drawer: null

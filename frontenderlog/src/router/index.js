@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomeView from '@/components/HomeView'
 import NewWorkout from '@/components/NewWorkout'
+import CreateExercise from '@/components/CreateExercise'
+import CreateWorkout from '@/components/CreateWorkout'
 
 Vue.use(Router)
 
@@ -13,14 +15,14 @@ export default new Router({
       component: HomeView
     },
     {
-      path: '/new_workout',
+      path: '/start_workout',
       name: 'NewWorkout',
       component: NewWorkout
     },
     {
       path: '/create_workout',
       name: 'CreateWorkout',
-      component: NewWorkout
+      component: CreateWorkout
     },
     {
       path: '/workouts',
@@ -30,7 +32,7 @@ export default new Router({
     {
       path: '/create_exercise',
       name: 'CreateExercise',
-      component: NewWorkout
+      component: CreateExercise
     },
     {
       path: '/progress',
